@@ -6,8 +6,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const api_key="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";
+
 const openai = new OpenAI({
-    apiKey:"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"
+    // apiKey:"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"
+    apiKey:api_key
 })
 app.post("/getRes",async(req,res)=>{
     const prompt = req.body.prompt;
